@@ -1,0 +1,44 @@
+@import '../../variables.scss';
+
+.classroom {
+  height: auto;
+  background-color: $pink;
+  display: flex;
+}
+.classroom-section-1 {
+  width: 40%;
+  padding: 50px 40px 50px 200px;
+  .classroom-title {
+    font-size: 40px;
+  }
+  p {
+    font-size: 16px;
+  }
+  .classroom-button-1 {
+    font-size: 14px;
+    background-color: $red;
+    color: $white;
+    padding: 7px 10px;
+    margin-right:  10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .classroom-button-2 {
+    font-size: 14px;
+    background-color: $black;
+    color: $white;
+    padding: 7px 10px;
+    margin-right:  10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+.classroom-section-2 {
+  width: 60%;
+  max-height: 100%;
+  img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+  }
+}

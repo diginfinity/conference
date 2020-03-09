@@ -1,0 +1,60 @@
+@import '../../variables.scss';
+
+.navigation {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.menu {
+  align-self: center;
+  padding-right: 10px;
+}
+.menu-circle {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: $menu-gray;
+  cursor: pointer;
+}
+.lines {
+  line-height: 50px;
+  align-self: center;
+  margin: auto;
+}
+.line {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 4px auto;
+}
+
+.nav-left {
+  display: flex;
+  align-self: center;
+  padding: 10px 0 10px 40px;;
+  p {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .conference-text {
+    color: $red;
+  }
+}
+
+.nav-right {
+  align-self: center;
+  padding-right: 40px;
+  .nav-button {
+    font-size: 14px;
+    background-color: $black;
+    color: $white;
+    padding: 7px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,29 @@
+@import '../../variables.scss';
+
+.footer {
+  height: auto;
+  background-color: $black;
+  color: $white;
+  display: flex;
+  padding: 50px 200px;
+}
+.footer-logo {
+  width: 10%;
+  margin: 20px;
+  p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+  }
+}
+.footer-item {
+  width: 30%;
+  .gray-paragraph {
+    color: $gray-paragraph;
+    font-size: 14px;
+    margin-top: 20px;
+  }
+  .paragraphs-block {
+    line-height: 6px;
+  }
+}

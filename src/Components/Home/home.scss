@@ -1,0 +1,23 @@
+@import '../../variables.scss';
+
+.home {
+  min-height: 80vh;
+  background-color: $white;
+  display: flex;
+  padding: 50px 200px;
+  .home-text {
+    align-self: flex-end;
+    width: 50%;
+    h2 {
+      font-size: 60px;
+      margin: 20px 0;
+    }
+  }
+  .home-image {
+    align-self: flex-start;
+    width: 50%;
+    img {
+      height: 550px;
+    }
+  }
+}

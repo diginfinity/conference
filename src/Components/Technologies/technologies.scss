@@ -1,0 +1,70 @@
+@import '../../variables.scss';
+
+.technologies {
+  height: auto;
+  background-color: $white;
+  padding: 50px 200px;
+}
+.technologies-section-1 {
+  width: 100%;
+  display: flex;
+  .technologies-item-1 {
+    width: calc(100%/3);
+    margin: 0;
+    box-shadow: 4px 1px 4px rgba(0, 0, 0, .2);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    img {
+      width: 100%;
+      margin-top: auto;
+    }
+  }
+  .technologies-item-2 {
+    width: calc(100%/3);
+    margin: 0;
+    box-shadow: 4px 1px 4px rgba(0, 0, 0, .2);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    img {
+      width: 100%;
+      margin-top: auto;
+    }
+  }
+  .technologies-item-3 {
+    width: calc(100%/3);
+    margin: 0;
+    box-shadow: 4px 1px 4px rgba(0, 0, 0, .2);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    img {
+      width: 100%;
+      margin-top: auto;
+    }
+  }
+  .item-text {
+    padding: 25px;
+  }
+}
+.technologies-section-2 {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+  .technologies-item-2 {
+    padding-right: 10px;
+    h3 {
+      font-size: 40px;
+      margin: 0;
+      padding-top: 30px;
+    }
+    p {
+      margin: 0;
+      padding-top: 30px;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@import '../../variables.scss';
+
+.conference {
+  height: auto;
+  background-color: $black;
+  color: $white;
+  display: flex;
+}
+.conference-section-1 {
+  width: 60%;
+  img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+  }
+}
+.conference-section-2 {
+  width: 40%;
+  padding: 50px 200px 50px 40px;
+  .conference-title {
+    font-size: 40px;
+  }
+  p {
+    font-size: 16px;
+  }
+  .conference-button-1 {
+    font-size: 14px;
+    background-color: $red;
+    color: $white;
+    padding: 7px 10px;
+    margin-right:  10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .conference-button-2 {
+    font-size: 14px;
+    background-color: $black;
+    color: $white;
+    padding: 7px 10px;
+    margin-right:  10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
