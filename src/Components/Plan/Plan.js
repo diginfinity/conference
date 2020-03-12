@@ -3,8 +3,13 @@ import React, { useState } from 'react';
 import './plan.scss';
 
 function Plan() {
-  const [conferencePrice, setConferencePrice] = useState('2,400 RSD');
-  const [classroomPrice, setClassroomPrice] = useState('4,200 RSD');
+  const [conPrice, setConPrice] = useState('2,400 RSD');
+  const [conBtnColor, setConBtnColor] = useState('#F47064');
+  const [disabledConBtn, setDisabledConBtn] = useState('#F2E8E6');
+
+  const [clsPrice, setClsPrice] = useState('4,200 RSD');
+  const [clsBtnColor, setClsBtnColor] = useState('#F47064');
+  const [disabledClsBtn, setDisabledClsBtn] = useState('#F2E8E6');
 
   return (
     <div className="plan">
@@ -14,15 +19,15 @@ function Plan() {
         <div className="price">
           <div className="price-item">
             <p><b>Konferencijska sala</b></p>
-            <h3>{conferencePrice} <span className="pdv">Sa PDV</span></h3>
-            <button className="conference-button" onClick={() => setConferencePrice('2,400 RSD')}>Po satu</button><button className="conference-button" onClick={() => setConferencePrice('10,400 RSD')}>Po danu</button>
+            <h3>{conPrice} <span className="pdv">Sa PDV</span></h3>
+            <button className="conference-button" style={{'background-color':`${conBtnColor}`}} onClick={() => {setConPrice('2,400 RSD'); setConBtnColor('#F47064'); setDisabledConBtn('#F2E8E6')}}>Po satu</button><button className="conference-button" style={{'background-color':`${disabledConBtn}`}} onClick={() => {setConPrice('10,400 RSD'); setConBtnColor('#F2E8E6'); setDisabledConBtn('#F47064')}}>Po danu</button>
             <p>Kapacitet do 45 osoba | Novi Sad</p>
             <button className="plan-button">Rezervišite!</button>
           </div>
           <div className="price-item">
             <p><b>Učionica</b></p>
-            <h3>{classroomPrice} <span className="pdv">Sa PDV</span></h3>
-            <button className="classroom-button" onClick={() => setClassroomPrice('4,200 RSD')}>Po satu</button><button className="classroom-button" onClick={() => setClassroomPrice('16,200 RSD')}>Po danu</button>
+            <h3>{clsPrice} <span className="pdv">Sa PDV</span></h3>
+            <button className="classroom-button" style={{'background-color':`${clsBtnColor}`}} onClick={() => {setClsPrice('4,200 RSD'); setClsBtnColor('#F47064'); setDisabledClsBtn('#F2E8E6')}}>Po satu</button><button className="classroom-button" style={{'background-color':`${disabledClsBtn}`}} onClick={() => {setClsPrice('16,200 RSD'); setClsBtnColor('#F2E8E6'); setDisabledClsBtn('#F47064')}}>Po danu</button>
             <p>Kapacitet do 13 osoba | Novi Sad</p>
             <button className="plan-button">Rezervišite!</button>
           </div>

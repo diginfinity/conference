@@ -18,7 +18,8 @@ function Classroom() {
         <p><b>Preuzmite plan objekta u PDF</b></p>
       </div>
       <div className="classroom-section-2">
-        <img src={conferenceImage} alt="home" />
+        <img src={conferenceImage} alt="classroom" />
+        <div className="classroom-details"></div>
       </div>
     </div>
   );

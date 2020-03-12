@@ -8,6 +8,7 @@ function Conference() {
     <div className="conference">
       <div className="conference-section-1">
         <img src={conferenceImage} alt="conference" />
+        <div className="conference-details"></div>
       </div>
       <div className="conference-section-2">
         <h3 className="conference-title">Konferencijska sala</h3>
