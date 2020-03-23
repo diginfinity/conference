@@ -1,0 +1,71 @@
+@import '../../styles/variables.scss';
+
+.plan {
+  height: auto;
+  background-color: $pink-1;
+  display: flex;
+  padding: 50px 200px;
+  &--section--1 {
+    width: 45%;
+    margin-right: 5%; 
+    .plan--title {
+      font-size: 56px;
+      margin: 0;
+    }
+    .red {
+      color: $red;
+    }
+    .price {
+      display: flex;
+      padding-top: 30px;
+      &--item {
+        width: 50%;
+        justify-content: space-between;
+        h3 {
+          font-size: 40px;
+          margin: 20px 0;
+          .pdv {
+            font-size: 14px;
+            vertical-align: top;
+            color: $gray-10;
+          }
+        }
+        &--conference--button{
+          font-size: 12px;
+          color: $white;
+          padding: 5px 7px;
+          border-radius: 5px;
+          outline: 0;
+          cursor: pointer;
+        }
+        &--classroom--button {
+          font-size: 12px;
+          color: $white;
+          padding: 5px 7px;
+          border-radius: 5px;
+          outline: 0;
+          cursor: pointer;
+        }
+        &--plan--button {
+          font-size: 14px;
+          background-color: $black-1;
+          color: $white;
+          padding: 7px 10px;
+          border-radius: 5px;
+          outline: 0;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  &--section--2 {
+    width: 50%;
+    h3 {
+      font-size: 36px;
+    }
+    .bold--paragraph {
+      font-weight: 900;
+      padding-top: 18px;
+    }
+  }
+}

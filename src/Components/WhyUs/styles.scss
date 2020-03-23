@@ -1,0 +1,30 @@
+@import '../../styles/variables.scss';
+
+.why {
+  height: auto;
+  background-color: $gray-1;
+  display: flex;
+  padding: 50px 200px;
+  &--container--1 {
+    width: 50%;
+    h2 {
+      font-size: 40px;
+    }
+  }
+  &--container--2 {
+    width: 50%;
+    .why--section--1 {
+      display: flex;
+      .hr--line {
+        border: 1px solid $gray-6;
+      }
+    }
+    .why--section--2 {
+      display: flex;
+    }
+    .why--item {
+      width: 50%;
+      padding: 10px;
+    }
+  }
+}

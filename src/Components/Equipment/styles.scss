@@ -1,0 +1,77 @@
+@import '../../styles/variables.scss';
+
+.technologies {
+  height: auto;
+  background-color: $white;
+  padding: 50px 200px;
+  &--section--1 {
+    max-width: 100%;
+    display: flex;
+    .section--item--1 {
+      background-color: $white;
+      width: 40%;
+      min-width: 40%;
+      box-shadow: 5px 0px 6px rgba(0, 0, 0, .2);
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      img {
+        width: 100%;
+        margin-top: auto;
+      }
+    }
+    .section--item--2 {
+      background-color: $white;
+      width: 40%;
+      min-width: 40%;
+      box-shadow: 5px 0px 6px rgba(0, 0, 0, .2);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      img {
+        width: 100%;
+        margin-top: auto;
+      }
+    }
+    .section--item--3 {
+      background-color: $white;
+      width: 40%;
+      min-width: 40%;
+      box-shadow: 5px 0px 6px rgba(0, 0, 0, .2);
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      img {
+        width: 100%;
+        margin-top: auto;
+      }
+    }
+    .hr--line {
+      border: 1px solid $gray-6;
+    }
+    .item--text {
+      padding: 25px;
+    }
+  }
+
+  &--section--2 {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    .section--item {
+      padding-right: 10px;
+      h3 {
+        font-size: 40px;
+        margin: 0;
+        padding-top: 30px;
+      }
+      p {
+        margin: 0;
+        padding-top: 30px;
+      }
+    }
+  }
+}

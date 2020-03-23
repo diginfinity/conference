@@ -1,0 +1,43 @@
+@import '../../styles/variables.scss';
+
+.footer {
+  height: auto;
+  background-color: $black-3;
+  color: $white;
+  padding: 50px 200px;
+  &--info {
+    display: flex;
+    padding-bottom: 40px;
+    &--logo {
+      width: 10%;
+      margin: 20px;
+      p {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 700;
+      }
+    }
+    &--item {
+      width: 30%;
+      .gray--paragraph {
+        color: $gray-6;
+        font-size: 14px;
+        margin-top: 20px;
+      }
+      .paragraphs--block {
+        line-height: 6px;
+      }
+    }
+  }
+  &--line {
+    border: 1px solid $gray-3;
+  }
+  &--copyrights {
+    display: flex;
+    justify-content: space-between;
+    p {
+      font-size: 14px;
+      color: $gray-6;
+    }
+  }
+}
