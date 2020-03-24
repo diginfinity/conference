@@ -1,8 +1,11 @@
-import React from "react";
+import React, {useState } from "react";
 
 import "./style.scss";
+import StepThree from "../StepThree";
 
 const StepTwo = () => {
+  const [state, setState] = useState(true)
+  if(state){
   return (
     <div className="conf--step--two">
       <h1>Rezervacija</h1>
@@ -38,7 +41,7 @@ const StepTwo = () => {
             <input type="text"/>
             <label>Kontakt Telefon</label>
             <input type="text"/>
-            <button>
+            <button onClick={() => setState(false)}>
               Sledeći korak
             </button>
           </form>
@@ -57,7 +60,7 @@ const StepTwo = () => {
       </div>
       <p className="card--footer">Ukoliko ne želite da rezervaciju popunjavate online, možete nas kontaktirati na telefon: 021 300 2956, radnim danima od 8:00h do 16:00h</p>
     </div>
-  );
+  );}else return <StepThree/>
 };
 
 export default StepTwo;

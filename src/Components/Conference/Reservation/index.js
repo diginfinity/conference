@@ -1,8 +1,5 @@
 import React from "react";
 import StepOne from "./StepOne";
-import StepTwo from "./StepTwo";
-import StepThree from "./StepThree";
-import Close from "./Close";
 
 import "./style.scss";
 
@@ -10,11 +7,7 @@ const ConfReservation = () => {
   return (
     <div className="conf--reservation">
       <div className="conf--reservation--container">
-        <StepOne />
-        <StepTwo />
-        <StepThree />
-        <Close />
-        
+        <StepOne/>
         <div className="reservation--container--logo">
           <p>digital</p>
           <p>infinity.</p>

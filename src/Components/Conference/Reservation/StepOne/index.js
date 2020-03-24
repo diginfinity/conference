@@ -1,8 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 
 import "./style.scss";
+import StepTwo from "../StepTwo";
 
-const StepOne = () => {
+const StepOne = (props) => {
+  const [state, setState] = useState(true)
+  
+  if(state){
   return (
     <div className="conf--step--one">
       <h1>Rezervacija</h1>
@@ -23,7 +27,7 @@ const StepOne = () => {
             <input type="text"/>
             <span className="max--num">Maksimalno 28 osoba</span>
             <br/>
-            <button>
+            <button onClick={() => setState(false)}>
               Sledeći korak
             </button>
           </form>
@@ -34,7 +38,7 @@ const StepOne = () => {
       </div>
       <p className="card--footer">Ukoliko ne želite da rezervaciju popunjavate online, možete nas kontaktirati na telefon: 021 300 2956, radnim danima od 8:00h do 16:00h</p>
     </div>
-  );
+  );}else return <StepTwo />
 };
 
 export default StepOne;
