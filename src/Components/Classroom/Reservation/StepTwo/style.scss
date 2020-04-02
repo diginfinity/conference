@@ -58,6 +58,11 @@
         border-radius: 5px;
         cursor: pointer;
       }
+      p {
+        color: $red;
+        margin: 0;
+        padding-bottom: 5px;
+      }
     }
     &--item--2 {
       width: 60%;

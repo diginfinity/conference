@@ -1,5 +1,7 @@
 import React from 'react';
 import homeImage from '../../assets/Image 22/Image 22.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 import './styles.scss';
 
@@ -13,7 +15,9 @@ function Home() {
         <h2>
           Digital Infinity konferencijska sala i učionica
         </h2>
-        <p>Saznajte više <span>&rarr;</span></p>
+        <span className="home--text--next">
+          Saznajte više <span><FontAwesomeIcon icon={faArrowRight} /></span>
+        </span>
       </div>
 
       <div className="home--image">

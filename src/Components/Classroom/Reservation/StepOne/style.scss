@@ -51,9 +51,15 @@
         border-radius: 5px;
         cursor: pointer;
       }
+      p {
+        color: $red;
+        margin: 0;
+        padding-bottom: 5px;
+      }
       .max--num {
         font-size: 12px;
         color: $gray-6;
+        margin: 0;
       }
     }
     &--item--2 {

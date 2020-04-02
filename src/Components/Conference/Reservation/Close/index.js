@@ -2,14 +2,15 @@ import React from "react";
 
 import "./style.scss";
 
-const Close = () => {
+const Close = ({ closeConfModal }) => {
   return (
     <div className="conf--close">
       <div className="display">
         <h1>Hvala!</h1>
         <p>vaša rezervacija je primljena!</p>
         <br/>
-        <button>
+        <button
+          onClick={closeConfModal}>
           Zatvori
         </button>
         <p>Uskoro ćemo Vas kontaktirati za detalje I predračun.</p>

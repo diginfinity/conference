@@ -5,12 +5,26 @@
   background-color: $black-3;
   color: $white;
   padding: 50px 200px;
+  @include responsive(big-screen) {
+    padding: 30px 100px;
+  }
+  @include responsive(tab-port) {
+    padding: 30px 50px;
+  }
   &--info {
     display: flex;
+    flex-direction: row;
     padding-bottom: 40px;
+    @include responsive(tab-port) {
+      flex-direction: column;
+    }
     &--logo {
       width: 10%;
       margin: 20px;
+      @include responsive(tab-port) {
+        width: 100%;
+        margin: 0;
+      }
       p {
         margin: 0;
         font-size: 18px;
@@ -19,6 +33,9 @@
     }
     &--item {
       width: 30%;
+      @include responsive(tab-port) {
+        width: 100%;
+      }
       .gray--paragraph {
         color: $gray-6;
         font-size: 14px;
@@ -34,7 +51,11 @@
   }
   &--copyrights {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    @include responsive(phone) {  
+      flex-direction: column;
+    }
     p {
       font-size: 14px;
       color: $gray-6;

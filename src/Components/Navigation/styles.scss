@@ -12,12 +12,16 @@
     transform: rotate(-90deg);
     top: 50%;
     right: -4%;
-    // @media only screen and (max-width: 600px) {
-    //   right: -25%;
-    // }
+    z-index: 10;
+    @include responsive(tab-port) {
+      right: -10%;
+    }
+    @include responsive(phone) {
+      right: -18%;
+    }
     h4 {
       font-size: 16px;
-      color: $white;
+      color: $red;
       line-height: 20px;
     }
   }
@@ -25,6 +29,9 @@
     display: flex;
     align-self: center;
     padding: 10px 0 10px 40px;
+    @include responsive(phone) {
+      padding-left: 20px;
+    }
     &--menu{
       align-self: center;
       padding-right: 10px;
@@ -63,6 +70,9 @@
   &--right {
     align-self: center;
     padding-right: 40px;
+    @include responsive(phone) {
+      padding-right: 20px;
+    }
     button {
       font-size: 14px;
       background-color: $black-3;

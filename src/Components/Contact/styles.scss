@@ -11,16 +11,44 @@
       width: 100%;
       height: 500px;
       object-fit: cover;
+      @include responsive(tab-land) {  
+        height: 300px;
+      }
     }
   }
   &--details {
     display: flex;
+    flex-direction: row;
+    @include responsive(tab-land) {  
+      flex-direction: column;
+    }
     &--section--1 {
       width: 50%;
-      img {
+      background-color: $black-3;
+      @include responsive(tab-land) {  
         width: 100%;
-        height: 100%;
-        object-fit: cover;
+      }
+      .map-responsive{
+        overflow: hidden;
+        padding-bottom: 80%;
+        position: relative;
+        height: 0;
+        @include responsive(phone) {  
+          padding-bottom:70%;
+        }
+        @include responsive(tab-land) {  
+          padding-bottom:60%;
+        }
+        @include responsive(large-screen) {  
+          padding-bottom:70%;
+        }
+        iframe{
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 100%;
+          position: absolute;
+        }
       }
     }
     &--section--2 {
@@ -28,15 +56,39 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      @include responsive(tab-land) {  
+        width: 100%;
+      }
+      @include responsive(phone) {  
+        flex-direction: column;
+      }
       .section--phone {
         width: 50%;
         background-color: $black-3;
         padding: 50px;
+        @include responsive(phone) {  
+          width: 100%;
+          padding: 0;
+        }
+        &--items {
+          @include responsive(phone) {
+            padding: 30px 50px;
+          }
+        }
       }
       .section--mail {
         width: 50%;
         background-color: $black-2;
         padding: 50px;
+        @include responsive(phone) {  
+          width: 100%;
+          padding: 0;
+        }
+        &--items {
+          @include responsive(phone) {
+            padding: 30px 50px;
+          }
+        }
       }
       .gray--paragraph {
         color: $gray-6;

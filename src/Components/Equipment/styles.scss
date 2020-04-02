@@ -4,9 +4,16 @@
   height: auto;
   background-color: $white;
   padding: 50px 200px;
+  @include responsive(big-screen) {
+    padding: 30px 100px;
+  }
+  @include responsive(tab-port) {
+    padding: 30px 50px;
+  }
   &--section--1 {
     max-width: 100%;
     display: flex;
+    flex-direction: row;
     .section--item--1 {
       background-color: $white;
       width: 40%;
@@ -59,14 +66,21 @@
 
   &--section--2 {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     padding-top: 50px;
+    @include responsive(phone) {  
+      flex-direction: column;
+    }
     .section--item {
       padding-right: 10px;
       h3 {
         font-size: 40px;
         margin: 0;
         padding-top: 30px;
+        @include responsive(tab-port) {
+          font-size: 20px;
+        }
       }
       p {
         margin: 0;

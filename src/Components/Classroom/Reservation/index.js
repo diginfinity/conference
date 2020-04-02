@@ -1,20 +1,20 @@
 import React from "react";
 import StepOne from "./StepOne";
-import StepTwo from "./StepTwo";
-import StepThree from "./StepThree";
-import Close from "./Close";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
 import "./style.scss";
 
-const ClassReservation = () => {
+const ClassReservation = ({ closeClassModal }) => {
   return (
     <div className="class--reservation">
       <div className="class--reservation--container">
+        <div className="class--reservation--container--close">
+          <span onClick={closeClassModal}>
+            <FontAwesomeIcon icon={faTimesCircle} />
+          </span>
+        </div>
         <StepOne />
-        <StepTwo />
-        <StepThree />
-        <Close />
-        
         <div className="reservation--container--logo">
           <p>digital</p>
           <p>infinity.</p>

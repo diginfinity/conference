@@ -23,3 +23,31 @@ $black-3: #17161A;
 $black-4: #162024;
 $black-5: #22171B;
 $black-6: #2A2A2A;
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 480px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 768px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 992px) {
+      @content;
+    }
+  }
+  @if $breakpoint == big-screen {
+    @media only screen and (max-width: 1200px) {
+      @content;
+    }
+  }
+  @if $breakpoint == large-screen {
+    @media only screen and (min-width: 1200px) {
+      @content;
+    }
+  }
+}
