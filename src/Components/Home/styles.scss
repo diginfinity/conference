@@ -1,0 +1,63 @@
+@import '../../styles/variables.scss';
+
+.home {
+  min-height: 80vh;
+  background-color: $white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 50px 200px;
+  @include responsive(big-screen) {
+    padding: 30px 100px;
+    min-height: auto;
+  }
+  @include responsive(tab-port) {
+    flex-direction: column-reverse;
+    padding: 30px 50px;
+  }
+  &--text {
+    align-self: flex-end;
+    width: 50%;
+    @include responsive(tab-port) {
+      align-self: unset;
+      width: 100%;
+    }
+    h2 {
+      font-size: 60px;
+      margin: 20px 0;
+      color: $black-3;
+      @include responsive(big-screen) {
+        font-size: 40px;
+      }
+    }
+    &--next {
+      font-size: 18px;
+      font-weight: 600;
+      color: $black-1;
+      cursor: pointer;
+      span {
+        font-size: 14px;
+        color: $black-1;
+        padding-left: 10px;
+      }
+    }
+  }
+  &--image {
+    align-self: flex-start;
+    width: 50%;
+    @include responsive(tab-land) {
+      align-self: unset;
+    }
+    @include responsive(tab-port) {
+      width: 100%;
+    }
+    img {
+      height: 550px;
+      float: right;
+      @include responsive(big-screen) {
+        height: 400px;
+        float: unset;;
+      }
+    }
+  }
+}

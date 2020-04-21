@@ -4,45 +4,37 @@ import ConfReservation from './Reservation';
 
 import conferenceImage from '../../assets/Image 28/Image 28.png';
 
-import '../../styles/helpers.scss';
+import './styles.scss';
 
 const Conference = () => {
   const [confReservation, setConfReservation] = useState(false);
   const closeConfModal = () => setConfReservation(false);
 
   return (
-    <div className="uk-section uk-padding-remove">
-      <div className="uk-grid uk-grid-match background-black-1">
-
-        <div className="uk-width-1-2@m">
-          <img src={conferenceImage} alt="conference" />
-          <div className="uk-height-max-medium background-white text-black">
-            <div className="uk-padding uk-margin-remove uk-align-right@m">Conference details - Postavka</div>
-          </div>
+    <div className="conference">
+      <div className="conference--section--1">
+        <img src={conferenceImage} alt="conference" />
+        <div className="conference--details"></div>
+      </div>
+      
+      <div className="conference--section--2">
+        <div className="conference--content">
+          <h3 className="conference--content--title">Konferencijska sala</h3>
+          <p>Raspolaže idealnim uslovima za organizaciju skupova do 40 osoba. Sala ima centralnu klimu, podno grejanje i dnevno svetlo. Opremljena je najsavremenijom tehničkom audio/vizuelnom opremom. Najam konferencijske sale uključuje:</p>
+          <p>+ Audio/vizuelnu opremu</p>
+          <p>+ Wi-Fi I optički internet velike brzine</p>
+          <p>+ Tehničku podršku (na zahtev)</p>
+          <p>+ Osoblje na recepciji (na zahtev)</p>
+          <button
+            className="conference--content--button--1"
+            onClick={() => setConfReservation(true)}>
+            Rezervišite!
+          </button>
+            <button className="conference--content--button--2">
+              Galerija
+            </button>
+          <p><b>Preuzmite plan objekta u PDF</b></p>
         </div>
-
-        <div className="uk-width-expand">
-          <div className="uk-width-3-4@m uk-padding uk-margin-auto">
-            <div className="text-white">
-              <h2 className="uk-text-bold uk-margin-top text-white">Konferencijska sala</h2>
-              <p>Raspolaže idealnim uslovima za organizaciju skupova do 40 osoba. Sala ima centralnu klimu, podno grejanje i dnevno svetlo. Opremljena je najsavremenijom tehničkom audio/vizuelnom opremom. Najam konferencijske sale uključuje:</p>
-              <p>+ Audio/vizuelnu opremu</p>
-              <p>+ Wi-Fi I optički internet velike brzine</p>
-              <p>+ Tehničku podršku (na zahtev)</p>
-              <p>+ Osoblje na recepciji (na zahtev)</p>
-              <button
-                className="uk-button uk-button-danger uk-button-small uk-text-capitalize uk-border-rounded uk-margin-small-right"
-                onClick={() => setConfReservation(true)}>
-                Rezervišite!
-              </button>
-              <button className="uk-button uk-button-secondary uk-button-small uk-text-capitalize uk-border-rounded">
-                Galerija
-              </button>
-              <p className="uk-text-bold">Preuzmite plan objekta u PDF</p>
-            </div>
-          </div>
-        </div>
-
       </div>
 
       {confReservation && (
@@ -50,7 +42,6 @@ const Conference = () => {
           <ConfReservation closeConfModal={closeConfModal} />
         </Modal>
       )}
-      
     </div>
   );
 }

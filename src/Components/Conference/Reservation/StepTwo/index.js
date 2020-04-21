@@ -2,7 +2,7 @@ import React, {useState } from "react";
 import { useForm, ErrorMessage } from "react-hook-form";
 import StepThree from "../StepThree";
 
-import '../../../../styles/helpers.scss';
+import "./style.scss";
 
 const StepTwo = () => {
   const [state, setState] = useState(true);
@@ -14,81 +14,75 @@ const StepTwo = () => {
 
   if(state){
     return (
-      <div className="uk-position-top-center uk-padding text-white">
-        <h1 className="text-white">Rezervacija</h1>
-        <p className="uk-text-large">Izaberite vreme i datum I unedited kontakt informacije</p>
-        <div className="uk-grid uk-padding uk-padding-remove-right text-black">
-          <div className="uk-width-1-2@m uk-padding background-white">
-            <form onSubmit={handleSubmit(onSubmit)}>
-              <div className="uk-grid uk-child-width-1-2@m">
-                <div>
-                  <p className="uk-text-small uk-margin-remove uk-text-bold">Datum od</p>
+      <div className="conf--step--two">
+        <h1>Rezervacija</h1>
+        <h2>Izaberite vreme i datum I unedited kontakt informacije</h2>
+        <div className="display">
+          <div className="display--item--1">
+            <form className="reservation--form" onSubmit={handleSubmit(onSubmit)}>
+              <div className="date">
+                <div className="date--section">
+                  <label>Datum od</label><br/>
                   <input
-                    className="uk-input uk-margin-small-bottom"
                     type="date"
                     name="date-from"
                     ref={register({
                       required: "Unesite datum"
                     })}
                   />
-                  <ErrorMessage errors={errors} className="uk-text-danger uk-margin-remove" name="date-from" as="p" />
+                  <ErrorMessage errors={errors} name="date-from" as="p" />
                 </div>
 
-                <div>
-                  <p className="uk-text-small uk-margin-remove uk-text-bold">Datum do</p>
+                <div className="date--section">
+                  <label>Datum do</label><br/>
                   <input
-                    className="uk-input uk-margin-small-bottom"
                     type="date"
                     name="date-to"
                     ref={register({
                       required: "Unesite datum"
                     })}
                   />
-                  <ErrorMessage errors={errors} className="uk-text-danger uk-margin-remove" name="date-to" as="p" />
+                  <ErrorMessage errors={errors} name="date-to" as="p" />
                 </div>
               </div>
 
-              <div className="uk-grid uk-child-width-1-2@m uk-margin-small-top">
-                <div>
-                  <p className="uk-text-small uk-margin-remove uk-text-bold">Vreme od</p>
+              <div className="date">
+                <div className="date--section">
+                  <label>Vreme od</label><br/>
                   <input
-                    className="uk-input uk-margin-small-bottom"
                     type="time"
                     name="time-from"
                     ref={register({
                       required: "Unesite vreme"
                     })}
                   />
-                  <ErrorMessage errors={errors} className="uk-text-danger uk-margin-remove" name="time-from" as="p" />
+                  <ErrorMessage errors={errors} name="time-from" as="p" />
                 </div>
-                <div>
-                  <p className="uk-text-small uk-margin-remove uk-text-bold">Vreme do</p>
+                <div className="date--section">
+                  <label>Vreme do</label><br/>
                   <input
-                    className="uk-input uk-margin-small-bottom"
                     type="time"
                     name="time-to"
                     ref={register({
                       required: "Unesite vreme"
                     })}
                   />
-                  <ErrorMessage errors={errors} className="uk-text-danger uk-margin-remove" name="time-to" as="p" />
+                  <ErrorMessage errors={errors} name="time-to" as="p" />
                 </div>
               </div>
               
-              <p className="uk-text-small uk-margin-remove uk-text-bold">Vase ime i/ili naziv kompanije organizatora dogadjaja</p>
+              <label>Vase ime i/ili naziv kompanije organizatora dogadjaja</label>
               <input
-                className="uk-input uk-margin-small-bottom"
                 type="text"
                 name="company-name"
                 ref={register({
                   required: "Popunite ovo polje"
                 })}
               />
-              <ErrorMessage errors={errors} className="uk-text-danger uk-margin-remove" name="company-name" as="p" />
+              <ErrorMessage errors={errors} name="company-name" as="p" />
               
-              <p className="uk-text-small uk-margin-remove uk-text-bold">Kontakt Telefon</p>
+              <label>Kontakt Telefon</label>
               <input
-                className="uk-input uk-margin-small-bottom"
                 type="text"
                 name="phone"
                 ref={register({
@@ -99,11 +93,10 @@ const StepTwo = () => {
                   }
                 })}
               />
-              <ErrorMessage errors={errors} className="uk-text-danger uk-margin-remove" name="phone" as="p" />
+              <ErrorMessage errors={errors} name="phone" as="p" />
               
-              <p className="uk-text-small uk-margin-remove uk-text-bold">Kontakt Email</p>
+              <label>Kontakt Email</label>
               <input
-                className="uk-input uk-margin-small-bottom"
                 type="text"
                 name="email"
                 ref={register({
@@ -114,16 +107,15 @@ const StepTwo = () => {
                   }
                 })}
               />
-              <ErrorMessage errors={errors} className="uk-text-danger uk-margin-remove" name="email" as="p" />
+              <ErrorMessage errors={errors} name="email" as="p" />
               
               <button
-                className="uk-button uk-button-secondary uk-button-small uk-text-capitalize uk-margin-small-top uk-border-rounded"
                 type="submit">
                 Sledeći korak
               </button>
             </form>
           </div>
-          <div className="uk-width-1-2@m uk-padding background-gray-2">
+          <div className="display--item--2">
             <h2>Detalji:</h2>
             <p>Tip: Konferencijska sala</p>
             <p>Broj osoba: 31</p>
@@ -131,11 +123,11 @@ const StepTwo = () => {
             <p>Datum do: 02.03.2020</p>
             <br/>
             <p>Od: 9:00h - 18:00h</p>
-            <h1>Ukupno: <span className="uk-text-danger">21,600</span> RSD<span className="uk-text-meta uk-text-top">Sa PDV</span></h1>
-            <hr className="hr-line"/>
+            <h1>Ukupno: <span className="red--text">21,600</span> RSD<span className="pdv">Sa PDV</span></h1>
+            <hr className="hr--line"/>
           </div>
         </div>
-        <p className="uk-text-small">Ukoliko ne želite da rezervaciju popunjavate online, možete nas kontaktirati na telefon: 021 300 2956, radnim danima od 8:00h do 16:00h</p>
+        <p className="card--footer">Ukoliko ne želite da rezervaciju popunjavate online, možete nas kontaktirati na telefon: 021 300 2956, radnim danima od 8:00h do 16:00h</p>
       </div>
     );
   } else return <StepThree />
