@@ -1,0 +1,102 @@
+@import './variables.scss';
+
+// Text color
+.text-red {
+  color: $red;
+}
+.text-white {
+  color: $white;
+}
+.text-black {
+  color: $black-3;
+}
+.text-gray {
+  color: $gray-6;
+}
+
+// Background color
+.background-red {
+  background-color: $red;
+}
+.background-pink {
+  background-color: $pink-1;
+}
+.background-black-1 {
+  background-color: $black-3;
+}
+.background-black-2 {
+  background-color: $black-2;
+}
+.background-white {
+  background-color: $white;
+}
+.background-gray-1 {
+  background-color: $gray-1;
+}
+.background-gray-2 {
+  background-color: $gray-2;
+}
+.background-modal {
+  background-color: rgba(23, 22, 26, 0.98);
+}
+
+// Z-index
+.z-index-1 {
+  z-index: 1;
+}
+.z-index-2 {
+  z-index: 2;
+}
+.z-index-3 {
+  z-index: 3;
+}
+.z-index-10 {
+  z-index: 10;
+}
+.z-index-100 {
+  z-index: 100;
+}
+
+// Navbar follow us links
+.nav-followus {
+  position: fixed;
+  transform: rotate(-90deg);
+  top: 50%;
+  right: -4%;
+  z-index: 10;
+  @include responsive(tab-port) {
+    right: -12%;
+  }
+  @include responsive(phone) {
+    right: -20%;
+  }
+  h4 {
+    font-size: 16px;
+    color: $red;
+    line-height: 20px;
+  }
+}
+
+// Helpers classes
+.hr-line {
+  border: 1px solid $gray-6;
+}
+.footer-line {
+  border: 1px solid $gray-3;
+}
+.logo-line-height {
+  line-height: 15px;
+}
+.footer-line-height {
+  line-height: 5px;
+}
+.card-width {
+  width: 40%;
+  min-width: 40%;
+}
+.pointer {
+  cursor: pointer;
+}
+.overflow {
+  overflow-y: scroll;
+}

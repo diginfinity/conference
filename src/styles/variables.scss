@@ -24,6 +24,8 @@ $black-4: #162024;
 $black-5: #22171B;
 $black-6: #2A2A2A;
 
+// Breakpoints
+
 @mixin responsive($breakpoint) {
   @if $breakpoint == phone {
     @media only screen and (max-width: 480px) {

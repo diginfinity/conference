@@ -9,6 +9,8 @@ import Classroom from './Components/Classroom';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
 
+import "uikit/dist/css/uikit.min.css";
+
 function App() {
   return (
     <div>
